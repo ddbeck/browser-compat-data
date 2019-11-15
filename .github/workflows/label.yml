@@ -19,4 +19,4 @@ jobs:
           repo-token: "${{ secrets.GITHUB_TOKEN }}"
       - uses: ./.github/actions/many-files-warning
         with:
-          repo-token: $"{{ secrets.GITHUB_TOKEN }}"
+          repo-token: "${{ secrets.GITHUB_TOKEN }}"
