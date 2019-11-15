@@ -1,0 +1,15 @@
+{
+  "name": "many-files-warning",
+  "version": "0.1.0",
+  "description": "A GitHub Actions action to warn when many files are in a pull request.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "CC0-1.0",
+  "dependencies": {
+    "@actions/core": "^1.2.0",
+    "@actions/github": "^1.1.0"
+  },
+  "prettier": {}
+}
