@@ -16,7 +16,7 @@ async function run() {
   const { changed_files: changedFiles } = github.context.payload.pull_request;
   core.debug(`${changedFiles} file(s) reported as changed in #${prNumber}`);
   if (changedFiles >= fileListLimit) {
-    core.debug(`met or exceeded API limit - commenting about it`);
+    core.debug(`met or exceeded PR file limit - commenting about it`);
     const client = new github.GitHub(token);
     commentOnlyOnce(
       client,
@@ -36,13 +36,18 @@ function getPrNumber() {
 }
 
 async function commentOnlyOnce(client, prNumber, message) {
+  const issueDetails = {
+    owner: github.context.repo.owner,
+    repo: github.context.repo.repo,
+    pull_number: prNumber,
+    body: message
+  };
+
   const comments = await client.issues.listComments(issueDetails);
   const alreadyPosted = comments.data.map(c => c.body).includes(message);
   if (!alreadyPosted) {
     await client.issues.createComment({
-      owner: github.context.repo.owner,
-      repo: github.context.repo.repo,
-      pull_number: prNumber,
+      ...issueDetails,
       body: message
     });
   }
