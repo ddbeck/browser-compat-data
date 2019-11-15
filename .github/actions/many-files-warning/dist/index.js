@@ -536,10 +536,9 @@ async function run() {
     return;
   }
 
-  core.debug(
-    `${github.context.payload.pull_request} file(s) reported as changed in #${prNumber}`
-  );
-  if (github.context.payload.pull_request >= fileListLimit) {
+  const { changed_files: changedFiles } = context.payload.pull_request;
+  core.debug(`${changedFiles} file(s) reported as changed in #${prNumber}`);
+  if (changedFiles >= fileListLimit) {
     core.debug(`met or exceeded API limit - commenting about it`);
     const client = new github.GitHub(token);
     commentOnlyOnce(
@@ -557,16 +556,6 @@ function getPrNumber() {
   }
 
   return pullRequest.number;
-}
-
-async function getChangedFilesCount(client, prNumber) {
-  const listFilesResponse = await client.pulls.listFiles({
-    owner: github.context.repo.owner,
-    repo: github.context.repo.repo,
-    pull_number: prNumber
-  });
-
-  return listFilesResponse.data.length;
 }
 
 async function commentOnlyOnce(client, prNumber, message) {
