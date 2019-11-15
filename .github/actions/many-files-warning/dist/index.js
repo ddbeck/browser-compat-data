@@ -536,7 +536,7 @@ async function run() {
     return;
   }
 
-  const { changed_files: changedFiles } = context.payload.pull_request;
+  const { changed_files: changedFiles } = github.context.payload.pull_request;
   core.debug(`${changedFiles} file(s) reported as changed in #${prNumber}`);
   if (changedFiles >= fileListLimit) {
     core.debug(`met or exceeded API limit - commenting about it`);
