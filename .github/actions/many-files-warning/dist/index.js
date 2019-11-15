@@ -584,6 +584,8 @@ async function commentOnlyOnce(client, prNumber, message) {
   }
 }
 
+run();
+
 
 /***/ }),
 
