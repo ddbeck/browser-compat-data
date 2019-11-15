@@ -39,7 +39,7 @@ async function commentOnlyOnce(client, prNumber, message) {
   const issueDetails = {
     owner: github.context.repo.owner,
     repo: github.context.repo.repo,
-    pull_number: prNumber,
+    issue_number: prNumber,
     body: message
   };
 
