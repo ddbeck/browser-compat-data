@@ -536,14 +536,12 @@ async function run() {
     return;
   }
 
-  const client = new github.GitHub(token);
-
-  core.debug(`fetching changed files for pr #${prNumber}`);
-  const count = await getChangedFilesCount(client, prNumber);
-  core.debug(`file(s) reported as changed: ${count}`);
-
-  if (changedFiles >= fileListLimit) {
+  core.debug(
+    `${github.context.payload.pull_request} file(s) reported as changed in #${prNumber}`
+  );
+  if (github.context.payload.pull_request >= fileListLimit) {
     core.debug(`met or exceeded API limit - commenting about it`);
+    const client = new github.GitHub(token);
     commentOnlyOnce(
       client,
       prNumber,
