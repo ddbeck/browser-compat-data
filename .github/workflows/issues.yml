@@ -1,6 +1,6 @@
 name: Comment
 
-on: issue
+on: issues
 
 jobs:
   comment:
