@@ -1,0 +1,10 @@
+name: Comment
+
+on: issue
+
+jobs:
+  comment:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          jq --raw-output . "${{ github.event_path }}"
