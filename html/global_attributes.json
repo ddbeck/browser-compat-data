@@ -1,6 +1,6 @@
 {
   "html": {
-    "global_attributes": {
+    "global_attribute": {
       "accesskey": {
         "__compat": {
           "mdn_url": "https://developer.mozilla.org/docs/Web/HTML/Global_attributes/accesskey",
