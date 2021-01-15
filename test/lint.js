@@ -1,4 +1,8 @@
 'use strict';
+
+const foo = null ?? 'default string';
+console.log(foo);
+
 const fs = require('fs');
 const path = require('path');
 const ora = require('ora');
