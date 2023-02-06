@@ -17,6 +17,7 @@ export declare function feature(id: string): Feature;
 declare type supported =
   | hasSupport // Supported
   | lacksSupport // Unsupported
+  | prefixedSupport // Supported behind a prefix
   | hasSupportPartially // Supported, but only satisfied by one or more statements with `partial_implementation` set to `true`
   | undefined; // Release not represented in a given feature
 // See the end for stronger definitions of the above.
@@ -34,6 +35,8 @@ declare class Browser {
   // etc.
 
   constructor(id: browserKey, data: unknown);
+
+  toArray(options: { includePreReleases: boolean }): Release[];
 
   releaseAt(index: number): Release | undefined;
   releaseOn(date: string): Release | undefined;
@@ -100,6 +103,15 @@ declare class Feature {
   // This is a little more speculative. Maybe you'd like to get notes for a
   // specific release?
   notesFor(release: Release | Release[], options: supportedByOptions): Note[];
+
+  supportStatements(
+    browser: browserKey | Browser | Release,
+  ): SupportStatement[];
+
+  // Not in-scope for this proposal, but things to consider for the future:
+  // Relative feature traversal
+  // parent(): Feature | Namespace;
+  // children(): (Feature | Namespace)[];
 }
 
 // Right now, notes apply to support statements (that is, version ranges), but
@@ -113,6 +125,31 @@ declare class Note {
 
   // We could even play with reformatting the text to omit version numbers.
   text(): string;
+}
+
+// While not strictly required for a public API, being able to compare a release
+// to a support statement is going to be a necessary intermediate step. It's
+// somewhat hard to construct a standalone support statement, so I don't know if
+// it will have that much utility for consumers generally, but it seems fair to
+// note hide this abstraction from them either.
+declare class SupportStatement {
+  feature: Feature;
+  browser: browserKey;
+  data: unknown;
+
+  constructor(feature: Feature, browser: browserKey, statement: unknown);
+
+  // Pass through BCD
+  version_added: string | boolean;
+  // etc.
+
+  // Make some things friendlier?
+  get version_removed(): string | boolean | null; // Convert undefined into nulls
+  get notes(): string[]; // Always have an array of strings, so you don't have test for strings or arrays
+  get partial_implementation(): boolean; // Never undefined
+
+  toReleases(): Release[]; // Convert a support statement into a sequence of Releases that correspond to it
+  has(release: Release): supported; // Check if a release is in the range represented by this support statement
 }
 
 // For completeness:
@@ -130,7 +167,9 @@ declare type hasSupport = true;
 declare type lacksSupport = false;
 // A given browser-version pair is **not** satisfied by the range test.
 
-declare type hasSupportPartially = 'partially';
+declare type prefixed = 'prefixed';
+
+declare type hasSupportPartially = 'partial';
 // A given browser-verison pair is satisfied by the range test, but the
 // satisfactory ranges all have `partial_implementation` set to `true`. That is
 // to say, there is no non-partial support statement available which satisfies
