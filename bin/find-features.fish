@@ -26,7 +26,7 @@ if not test -e $TRAVERSAL_FILE
 end
 
 if not test $regenerate -eq 0
-    echo Regenerating traversal file: (realpath --relative-to=$PWD $TRAVERSAL_FILE) >&2
+    echo Regenerating traversal file: (grealpath --relative-to=$PWD $TRAVERSAL_FILE) >&2
     npm run --silent traverse | jq --raw-input --null-input --arg commit $headref '{ "commit": $commit, "lines": [inputs] }' >$TRAVERSAL_FILE
 end
 
