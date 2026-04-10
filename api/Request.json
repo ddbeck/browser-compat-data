@@ -185,6 +185,52 @@
             }
           }
         },
+        "init_body_parameter": {
+          "__compat": {
+            "description": "`init.body` parameter",
+            "spec_url": "https://fetch.spec.whatwg.org/#bodyinit-unions",
+            "tags": [
+              "web-features:fetch"
+            ],
+            "support": {
+              "bun": {
+                "version_added": "1.0.0"
+              },
+              "chrome": {
+                "version_added": "42"
+              },
+              "chrome_android": "mirror",
+              "deno": {
+                "version_added": "1.0"
+              },
+              "edge": {
+                "version_added": "14"
+              },
+              "firefox": {
+                "version_added": "39"
+              },
+              "firefox_android": "mirror",
+              "nodejs": {
+                "version_added": "18.0.0"
+              },
+              "oculus": "mirror",
+              "opera": "mirror",
+              "opera_android": "mirror",
+              "safari": {
+                "version_added": "10.1"
+              },
+              "safari_ios": "mirror",
+              "samsunginternet_android": "mirror",
+              "webview_android": "mirror",
+              "webview_ios": "mirror"
+            },
+            "status": {
+              "experimental": false,
+              "standard_track": true,
+              "deprecated": false
+            }
+          }
+        },
         "init_browsingTopics_parameter": {
           "__compat": {
             "description": "`init.browsingTopics` parameter",
