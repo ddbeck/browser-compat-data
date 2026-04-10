@@ -229,6 +229,45 @@
               "standard_track": true,
               "deprecated": false
             }
+          },
+          "readablestream": {
+            "__compat": {
+              "description": "`ReadableStream` body",
+              "spec_url": "https://fetch.spec.whatwg.org/#concept-body-stream",
+              "support": {
+                "chrome": {
+                  "version_added": "105"
+                },
+                "chrome_android": "mirror",
+                "deno": {
+                  "version_added": "1.7"
+                },
+                "edge": "mirror",
+                "firefox": {
+                  "version_added": false,
+                  "impl_url": "https://bugzil.la/1387483"
+                },
+                "firefox_android": "mirror",
+                "nodejs": {
+                  "version_added": "18.0.0"
+                },
+                "oculus": "mirror",
+                "opera": "mirror",
+                "opera_android": "mirror",
+                "safari": {
+                  "version_added": false
+                },
+                "safari_ios": "mirror",
+                "samsunginternet_android": "mirror",
+                "webview_android": "mirror",
+                "webview_ios": "mirror"
+              },
+              "status": {
+                "experimental": true,
+                "standard_track": true,
+                "deprecated": false
+              }
+            }
           }
         },
         "init_browsingTopics_parameter": {
@@ -514,47 +553,6 @@
               "webview_android": {
                 "version_added": false
               },
-              "webview_ios": "mirror"
-            },
-            "status": {
-              "experimental": true,
-              "standard_track": true,
-              "deprecated": false
-            }
-          }
-        },
-        "request_body_readablestream": {
-          "__compat": {
-            "description": "Send `ReadableStream` in request body",
-            "tags": [
-              "web-features:fetch"
-            ],
-            "support": {
-              "chrome": {
-                "version_added": "105"
-              },
-              "chrome_android": "mirror",
-              "deno": {
-                "version_added": "1.7"
-              },
-              "edge": "mirror",
-              "firefox": {
-                "version_added": false,
-                "impl_url": "https://bugzil.la/1387483"
-              },
-              "firefox_android": "mirror",
-              "nodejs": {
-                "version_added": "18.0.0"
-              },
-              "oculus": "mirror",
-              "opera": "mirror",
-              "opera_android": "mirror",
-              "safari": {
-                "version_added": false
-              },
-              "safari_ios": "mirror",
-              "samsunginternet_android": "mirror",
-              "webview_android": "mirror",
               "webview_ios": "mirror"
             },
             "status": {

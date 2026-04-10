@@ -536,7 +536,6 @@ api.ReportingObserver.ReportingObserver.options_parameter
 api.ReportingObserver.ReportingObserver.options_parameter.types_property
 api.ReportingObserver.worker_support
 api.Request.Request.cross_origin_stripped
-api.Request.Request.request_body_readablestream
 api.Request.Request.response_body_readablestream
 api.Request.cache.only-if-cached
 api.Request.credentials.default_same-origin
