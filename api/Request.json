@@ -230,7 +230,7 @@
               "deprecated": false
             }
           },
-          "readablestream": {
+          "accepts_readablestream": {
             "__compat": {
               "description": "`ReadableStream` body",
               "spec_url": "https://fetch.spec.whatwg.org/#concept-body-stream",
