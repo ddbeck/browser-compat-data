@@ -579,6 +579,54 @@
             "deprecated": false
           }
         }
+      },
+      "options_parameter": {
+        "__compat": {
+          "description": "`options` parameter",
+          "spec_url": "https://fetch.spec.whatwg.org/#requestinit",
+          "tags": [
+            "web-features:fetch"
+          ],
+          "support": {
+            "bun": {
+              "version_added": "1.0.0"
+            },
+            "chrome": {
+              "version_added": "42",
+              "notes": "From Chrome 47, default values for the properties changed. `mode` defaults to `same-origin` (from `no-cors`). `credentials` defaults to `include` (from `same-origin`). `redirect` defaults to `follow` (from `manual`)."
+            },
+            "chrome_android": "mirror",
+            "deno": {
+              "version_added": "1.0",
+              "notes": "Fetching with a `\"manual\"` redirect mode does not result in a `\"opaqueredirect\"` response, but a regular response."
+            },
+            "edge": {
+              "version_added": "14"
+            },
+            "firefox": {
+              "version_added": "39"
+            },
+            "firefox_android": "mirror",
+            "nodejs": {
+              "version_added": "18.0.0"
+            },
+            "oculus": "mirror",
+            "opera": "mirror",
+            "opera_android": "mirror",
+            "safari": {
+              "version_added": "10.1"
+            },
+            "safari_ios": "mirror",
+            "samsunginternet_android": "mirror",
+            "webview_android": "mirror",
+            "webview_ios": "mirror"
+          },
+          "status": {
+            "experimental": false,
+            "standard_track": true,
+            "deprecated": false
+          }
+        }
       }
     }
   }
