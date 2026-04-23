@@ -1,5 +1,70 @@
 # @mdn/browser-compat-data release notes
 
+## [v7.3.12](https://github.com/mdn/browser-compat-data/releases/tag/v7.3.12)
+
+April 17, 2026
+
+### Additions
+
+- `api.HTMLTemplateElement.shadowRootSlotAssignment` ([#29457](https://github.com/mdn/browser-compat-data/pull/29457))
+- `api.ReportingObserver.ReportingObserver.options_parameter.types_property.permissions-policy-violation` ([#29500](https://github.com/mdn/browser-compat-data/pull/29500))
+- `api.WGSLLanguageFeatures.extension_texture_and_sampler_let` ([#29469](https://github.com/mdn/browser-compat-data/pull/29469))
+- `browsers.bun.releases.1.3.12` ([#29463](https://github.com/mdn/browser-compat-data/pull/29463))
+- `browsers.edge.releases.150` ([#29463](https://github.com/mdn/browser-compat-data/pull/29463))
+- `browsers.opera_android.releases.97` ([#29490](https://github.com/mdn/browser-compat-data/pull/29490))
+- `css.properties.hanging-punctuation.force-end` ([#29497](https://github.com/mdn/browser-compat-data/pull/29497))
+- `css.types.color.light-dark.image_value` ([#29429](https://github.com/mdn/browser-compat-data/pull/29429))
+- `css.types.env.preferred-text-scale` ([#29453](https://github.com/mdn/browser-compat-data/pull/29453))
+- `html.elements.meta.name.text-scale` ([#29453](https://github.com/mdn/browser-compat-data/pull/29453))
+- `html.elements.template.shadowrootslotassignment` ([#29457](https://github.com/mdn/browser-compat-data/pull/29457))
+- `webdriver.bidi.script.getRealms.type_parameter.worker` ([#29499](https://github.com/mdn/browser-compat-data/pull/29499))
+
+### Statistics
+
+- 14 contributors have changed 192 files with 1,329 additions and 830 deletions in 37 commits ([`v7.3.11...v7.3.12`](https://github.com/mdn/browser-compat-data/compare/v7.3.11...v7.3.12))
+- 19,570 total features
+- 1,242 total contributors
+- 5,639 total stargazers
+
+## [v7.3.11](https://github.com/mdn/browser-compat-data/releases/tag/v7.3.11)
+
+April 10, 2026
+
+### Additions
+
+- `api.CustomElementRegistry.define.html_name_validity` ([#29217](https://github.com/mdn/browser-compat-data/pull/29217))
+- `api.CustomElementRegistry.whenDefined.html_name_validity` ([#29217](https://github.com/mdn/browser-compat-data/pull/29217))
+- `api.Document.createAttribute.html_name_validity` ([#29217](https://github.com/mdn/browser-compat-data/pull/29217))
+- `api.Document.createAttributeNS.html_name_validity` ([#29217](https://github.com/mdn/browser-compat-data/pull/29217))
+- `api.Document.createElement.html_name_validity` ([#29217](https://github.com/mdn/browser-compat-data/pull/29217))
+- `api.Document.createElementNS.html_name_validity` ([#29217](https://github.com/mdn/browser-compat-data/pull/29217))
+- `api.Element.setAttribute.html_name_validity` ([#29217](https://github.com/mdn/browser-compat-data/pull/29217))
+- `api.Element.setAttributeNodeNS.html_name_validity` ([#29217](https://github.com/mdn/browser-compat-data/pull/29217))
+- `api.Element.toggleAttribute.html_name_validity` ([#29217](https://github.com/mdn/browser-compat-data/pull/29217))
+- `api.PaymentRequest.getSecurePaymentConfirmationCapabilities_static` ([#29434](https://github.com/mdn/browser-compat-data/pull/29434))
+- `api.WGSLLanguageFeatures.extension_subgroup_uniformity` ([#29422](https://github.com/mdn/browser-compat-data/pull/29422))
+- `browsers.chrome_android.releases.150` ([#29413](https://github.com/mdn/browser-compat-data/pull/29413))
+- `browsers.chrome.releases.150` ([#29413](https://github.com/mdn/browser-compat-data/pull/29413))
+- `browsers.opera.releases.126` ([#29414](https://github.com/mdn/browser-compat-data/pull/29414))
+- `browsers.opera.releases.127` ([#29414](https://github.com/mdn/browser-compat-data/pull/29414))
+- `browsers.opera.releases.128` ([#29414](https://github.com/mdn/browser-compat-data/pull/29414))
+- `browsers.opera.releases.129` ([#29414](https://github.com/mdn/browser-compat-data/pull/29414))
+- `browsers.opera.releases.130` ([#29414](https://github.com/mdn/browser-compat-data/pull/29414))
+- `browsers.opera.releases.131` ([#29414](https://github.com/mdn/browser-compat-data/pull/29414))
+- `browsers.opera.releases.132` ([#29444](https://github.com/mdn/browser-compat-data/pull/29444))
+- `browsers.webview_android.releases.150` ([#29413](https://github.com/mdn/browser-compat-data/pull/29413))
+- `css.at-rules.container.container-query_optional` ([#29300](https://github.com/mdn/browser-compat-data/pull/29300))
+- `css.types.url.cross-origin` ([#29440](https://github.com/mdn/browser-compat-data/pull/29440))
+- `css.types.url.referrer-policy` ([#29440](https://github.com/mdn/browser-compat-data/pull/29440))
+- `http.headers.Reporting-Endpoints.crash-reporting` ([#29399](https://github.com/mdn/browser-compat-data/pull/29399))
+
+### Statistics
+
+- 11 contributors have changed 49 files with 950 additions and 300 deletions in 28 commits ([`v7.3.10...v7.3.11`](https://github.com/mdn/browser-compat-data/compare/v7.3.10...v7.3.11))
+- 19,561 total features
+- 1,240 total contributors
+- 5,628 total stargazers
+
 ## [v7.3.10](https://github.com/mdn/browser-compat-data/releases/tag/v7.3.10)
 
 April 3, 2026
